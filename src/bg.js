@@ -17,9 +17,25 @@ function genRandom() {
   const number = Math.floor(Math.random() * IMG_NUMBER);
   return number;
 }
+
+function removeImage(iamge) {
+  const image = document.querySelector(".bgImage");
+  if (image != null) {
+    body.removeChild(image);
+  }
+}
+
+function rotateBg() {
+  removeImage();
+  const randomNumber = genRandom();
+  paintImage(randomNumber);
+}
+
 function init() {
   const randomNumber = genRandom();
   paintImage(randomNumber);
+
+  setInterval(rotateBg, 8000);
 }
 
 init();

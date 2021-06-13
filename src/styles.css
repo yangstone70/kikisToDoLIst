@@ -23,12 +23,18 @@ button {
   display: block;
 }
 
-@keyframes fadeIn {
-  from {
+@keyframes fadeEffect {
+  0% {
     opacity: 0;
   }
-  to {
+  20% {
     opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 
@@ -39,12 +45,11 @@ button {
   width: 100%;
   height: auto;
   z-index: -1;
-  animation: fadeIn 1s linear;
+  animation: fadeEffect 8s linear;
 }
 
 .header {
-  height: 60px;
-  font-size: 24px;
+  height: 80px;
   margin-bottom: 20px;
 
   display: flex;
@@ -52,24 +57,28 @@ button {
   justify-content: space-evenly;
 }
 .greetings {
-  font-size: 16px;
+  font-size: 24px;
+  margin-top: 10px;
   margin-left: 10px;
 }
 
 .section__todo {
-  margin-bottom: 10px;
+  margin-bottom: 25px;
 }
 h2 {
-  font-size: 22px;
+  font-size: 28px;
+  margin-top: 30px;
 }
 input {
   background-color: rgba(0, 0, 0, 0);
   border-style: none;
   color: white;
-  height: 20px;
+  height: 30px;
+  width: 300px;
   opacity: 0.8;
-  font-size: 16px;
-  margin-bottom: 10px;
+  font-size: 22px;
+  margin-top: 10px;
+  margin-left: 25px;
   text-align: left;
   border-bottom: 2px solid tomato;
 }
@@ -78,14 +87,16 @@ input::placeholder {
   opacity: 0.8;
 }
 h3 {
-  font-size: 22px;
-  margin: 5px 0px;
+  font-size: 28px;
+  margin-top: 30px;
 }
 ul {
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 li {
-  font-size: 14px;
-  margin-left: 20px;
-  margin-bottom: 0px;
+  font-size: 22px;
+  margin: 10px 20px;
+}
+.js-weather {
+  font-size: 22px;
 }

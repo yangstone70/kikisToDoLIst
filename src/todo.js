@@ -106,9 +106,9 @@ function paintPending(id, text) {
 
   paintSpan.innerText = text;
 
+  paintLi.appendChild(paintCheckBtn);
   paintLi.appendChild(paintSpan);
   paintLi.appendChild(paintDelBtn);
-  paintLi.appendChild(paintCheckBtn);
   paintLi.id = id;
   pendingList.appendChild(paintLi);
 
@@ -146,9 +146,10 @@ function paintFinished(id, text) {
   paintDelBtn.addEventListener("click", deleteFinished);
   paintCheckBtn.addEventListener("click", checkFinished);
   paintSpan.innerText = text;
+
+  paintLi.appendChild(paintCheckBtn);
   paintLi.appendChild(paintSpan);
   paintLi.appendChild(paintDelBtn);
-  paintLi.appendChild(paintCheckBtn);
   paintLi.id = id;
 
   finishedList.appendChild(paintLi);
