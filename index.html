@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KiKi's to Do List</title>
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="js-clock">
+        <h2>00:00:00</h2>
+      </div>
+      <form class="js-nameForm form">
+        <input type="text" placeholder="What is your name?" />
+      </form>
+      <p class="js-greetings greetings"></p>
+    </header>
+
+    <section class="section__todo">
+      <h2>💖 To Do List</h2>
+      <form class="js-toDoForm">
+        <input class="js-input" type="text" placeholder="Write a to do here" />
+      </form>
+      <h3>💕 Pending</h3>
+      <ul class="js-pendingList"></ul>
+      <h3>💘 Finished</h3>
+      <ul class="js-finishedList"></ul>
+    </section>
+
+    <section class="section__weather">
+      <div>
+        <p class="js-weather"></p>
+      </div>
+    </section>
+
+    <script src="src/clock.js"></script>
+    <script src="src/greeting.js"></script>
+    <script src="src/todo.js"></script>
+    <script src="src/bg.js"></script>
+    <script src="src/weather.js"></script>
+  </body>
+</html>

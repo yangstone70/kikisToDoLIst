@@ -1,0 +1,91 @@
+@import "reset.css";
+body {
+  background-color: black;
+  color: white;
+  text-shadow: 1px 1px 2px rgb(0, 0, 0);
+  padding: 20px 20px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.clicked {
+  color: rgb(194, 194, 194);
+}
+
+.form,
+.greetings {
+  display: none;
+}
+
+.showing {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.bgImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: -1;
+  animation: fadeIn 1s linear;
+}
+
+.header {
+  height: 60px;
+  font-size: 24px;
+  margin-bottom: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.greetings {
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.section__todo {
+  margin-bottom: 10px;
+}
+h2 {
+  font-size: 22px;
+}
+input {
+  background-color: rgba(0, 0, 0, 0);
+  border-style: none;
+  color: white;
+  height: 20px;
+  opacity: 0.8;
+  font-size: 16px;
+  margin-bottom: 10px;
+  text-align: left;
+  border-bottom: 2px solid tomato;
+}
+input::placeholder {
+  color: white;
+  opacity: 0.8;
+}
+h3 {
+  font-size: 22px;
+  margin: 5px 0px;
+}
+ul {
+  margin-bottom: 10px;
+}
+li {
+  font-size: 14px;
+  margin-left: 20px;
+  margin-bottom: 0px;
+}
