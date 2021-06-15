@@ -9,9 +9,10 @@ localStorage.getItem("country")
 */
 
 const form = document.querySelector(".js-nameForm");
-input = form.querySelector("input");
+nameInput = form.querySelector("input");
 greetings = document.querySelector(".js-greetings");
 // querySelectorAll은 여러 input 오브젝트를 가져오므로 array에 저장된다.
+const removeNameBtn = document.createElement("button");
 
 const USER_LS = "currentUser",
   SHOWING_CN = "showing";
@@ -21,18 +22,29 @@ function paintGreetings(text) {
   form.classList.remove(SHOWING_CN);
   greetings.classList.add(SHOWING_CN);
   greetings.innerText = `🌱 Hello ${text} ~`;
+  removeNameBtn.innerText = "⛔️";
+  removeNameBtn.addEventListener("click", removeName);
+  greetings.appendChild(removeNameBtn);
+}
+
+function removeName() {
+  localStorage.removeItem(USER_LS);
+  greetings.removeChild(removeNameBtn);
+  greetings.classList.remove(SHOWING_CN);
+  askForName();
 }
 
 //입력폼을 드러내어 유저네임을 받으려는 함수
 function askForName() {
   //greetings.classList.remove("SHOWING_CN"); 어차피 보여주어도 출력되는 게 없다.
   form.classList.add(SHOWING_CN);
-  form.addEventListener("submit", handleSubmit);
+  form.addEventListener("submit", nameSubmit);
+  nameInput.value = "";
 }
 
-function handleSubmit(event) {
+function nameSubmit(event) {
   event.preventDefault(); //기본동작인 리프레시와 데이터 전송 같은 걸 막는다.
-  const currentValue = input.value; // input의 내용을 가져온다.
+  const currentValue = nameInput.value; // input의 내용을 가져온다.
   paintGreetings(currentValue);
   saveName(currentValue);
 }

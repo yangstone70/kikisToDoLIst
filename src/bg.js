@@ -8,7 +8,12 @@ function handleImgLoad() {
 
 function paintImage(imgNumber) {
   const image = new Image();
-  image.src = `./img/delivery witch kiki 0${imgNumber + 0}.png`;
+  if (window.innerWidth / window.innerHeight >= 1) {
+    image.src = `./img/delivery witch kiki 0${imgNumber + 0}.png`;
+  } else {
+    image.src = `./img/delivery witch kiki 1${imgNumber + 0}.jpeg`;
+  }
+
   image.addEventListener("loadend", handleImgLoad);
   image.classList.add("bgImage"); //css
   body.appendChild(image);
