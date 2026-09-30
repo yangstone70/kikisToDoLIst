@@ -40,7 +40,8 @@ function init() {
   const randomNumber = genRandom();
   paintImage(randomNumber);
 
-  setInterval(rotateBg, 8000);
+   // setInterval(rotateBg, 8000); // 1000밀리초 * 8 = 8초
+  setInterval(rotateBg, 1800000); // 30 * 60초 * 1000밀리초 = 30분
 }
 
 init();
